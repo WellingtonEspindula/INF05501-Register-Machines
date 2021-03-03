@@ -80,6 +80,32 @@ public class Main {
             e.printStackTrace();
         }
 
+/*        try {
+            Dna dna = new Dna();
+
+            dna.insere('$');
+
+            while (!dna.is('$')) {
+                if (dna.is('A')) {
+                    dna.insere('T');
+                    dna.del();
+                } else if (dna.is('C')) {
+                    dna.insere('C');
+                    dna.del();
+                } else if (dna.is('G')) {
+                    dna.insere('G');
+                    dna.del();
+                } else {
+                    dna.insere('A');
+                    dna.del();
+                }
+            }
+
+            System.out.println(dna);
+            System.out.println(dna.sai().isEmpty());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
 
     }
 

@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Dna {
     Queue<Character> memory;
@@ -29,7 +27,9 @@ public class Dna {
                 throw new Exception("Value "+value+" is not valid in DNA machine");
             }
         }
-        this.memory = new LinkedList<>(Arrays.asList(values));
+        List<Character> memoryValues = new LinkedList<>(Arrays.asList(values));
+        Collections.reverse(memoryValues);
+        this.memory = new LinkedList<>(memoryValues);
     }
 
     private void assertDnaValueValid(char value) throws Exception {
@@ -78,4 +78,10 @@ public class Dna {
     public String toString() {
         return stringFromMemory();
     }
+/*    @Override
+    public String toString() {
+        return "Dna{" +
+                "memory=" + memory +
+                '}';
+    }*/
 }

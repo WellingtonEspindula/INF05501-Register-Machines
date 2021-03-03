@@ -4,7 +4,7 @@ public class MultisetTest {
 
     @Test
     public void function() throws Exception {
-        Multiset mm = new Multiset(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1);
+        Multiset mm = new Multiset(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1);
         System.out.println(mm);
         if (mm.hasMoreZerosThanOnes()) {
             return1(mm);
@@ -86,7 +86,7 @@ public class MultisetTest {
 
     private static void removeAll(Multiset mm) throws Exception {
         while (true) {
-            while (mm.hasMoreZerosThanOnes() || mm.hasLessZerosThanOnes() || mm.onlyOs() || mm.only1s()) {
+            while (mm.hasMoreZerosThanOnes() || mm.hasLessZerosThanOnes()) {
                 mm.delete(0);
                 mm.delete(1);
             }
